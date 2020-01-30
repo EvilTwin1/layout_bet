@@ -2,6 +2,9 @@
 @import "font";
 @import "vars";
 
+body{
+    font-family: GothamPro;
+}
 
 /*------- header -------*/
 .wrapp-players{
@@ -29,7 +32,6 @@ header{
 
 .description{
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    font-family: GothamPro;
     font-size: 16px;
     font-weight: 900;
     font-style: italic;
@@ -39,7 +41,6 @@ header{
     span{
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
         color: #00d15d;
-        font-family: GothamPro;
         font-size: 16px;
         font-weight: 900;
         font-style: italic;
@@ -47,104 +48,103 @@ header{
     }
 }
 
-.bonus{
-    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    color: white;
-    font-family: GothamPro;
-    font-size: 111px;
-    text-transform: uppercase;
-    margin: 0px;
-    text-align: left;
+.promo{
+    &__bonus{
+        text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 111px;
+        text-transform: uppercase;
+        margin: 0px;
+        text-align: left;
+    }
+    &__procent{
+        //text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+        //color: #00d15d;
+        line-height: .76;
+        background: linear-gradient(to bottom, #00df79,#00bc34);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 151px;
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    &__deposit{
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 35px;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        margin: 10px 0px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
 }
 
-.procent{
-    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    color: #00d15d;
-    font-family: GothamPro;
-    font-size: 151px;
-    text-transform: uppercase;
-    margin-top: -35px;
-    margin-bottom: -25px;
-    text-align: left;
-}
-
-.deposit{
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-    color: white;
-    font-family: GothamPro;
-    font-size: 35px;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    margin: 10px 0px;
-    text-align: left;
-}
-
-.wrapp-link{
+.action{
     position: relative;
     z-index: 1;
-}
-
-.x{
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    font-family: GothamPro;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    color: white;
-    font-size: 24px;
-    max-width: 400px;
-    span{
-        color: #00d15d;
-        font-size: 28px;
+    &__descr{
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        color: white;
+        font-size: 24px;
+        max-width: 400px;
+        margin: 45px 0px;
+        span{
+            color: #00d15d;
+            font-size: 28px;
+        }
+    }
+    &__link{
+        background-color: white;
+        background-image: linear-gradient(to top, #E8A300 0%, #ffe68b 100%);
+        border-radius: 20px;
+        text-decoration: none;
+        max-width: 385px;
+        height: 80px;
+        display: block;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+        color: #242426;
+        font-size: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 3.5;
+        animation: 1s pulse linear infinite;
+        transition: 1s;
+        &:hover{
+            background-image: linear-gradient(to top, #E8A35B 0%, #ffe68b 100%);
+        }
     }
 }
 
-.promo_link{
-    background-color: white;
-    background-image: linear-gradient(to top, #E8A300 0%, #ffe68b 100%);
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.49), inset 0 2px 0 rgba(255, 255, 255, 0.25);
-    text-decoration: none;
-    max-width: 385px;
-    height: 80px;
-    display: block;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-    color: #242426;
-    font-family: GothamPro;
-    font-size: 24px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 3.5;
-    animation: 0.2s tremor linear infinite;
-    transition: 1s;
-    &:hover{
-        background-image: linear-gradient(to top, #E8A35B 0%, #ffe68b 100%);
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(232, 163, 0, .5);
+    }
+
+    100% {
+        box-shadow: 0 0 30px 40px rgba(232, 163, 0, 0);
     }
 }
 
-@keyframes tremor {
-    0%, 25% {
-        left: -1px;
-        transform: translateX(1%);
-    }
-    50%, 100% {
-        left: 1px;
-        transform: translateX(0%);
-    }
-}
-
-.wrapp-man{
+.man{
     position: absolute;
     top: 52%;
     left: 25%;
     transform: translateX(-50%) !important;
     z-index: 1;
+    &__img{
+        height: 315px;
+    }
 }
-.man{
-    height: 315px;
-}
+
 
 .truck{
     position: absolute;
@@ -176,23 +176,20 @@ header{
 
 @keyframes go-top-bottom {
     from {
-        top: -100px;
-        opacity: 1;
+        top: 0px;
+        transform: translateY(-60px);
     }
     to {
-        top: -65px;
-        opacity: 1;
+        transform: translateY(-20px);
     }
 }
 
 @keyframes go-bottom-top {
     from {
-        top: 150px;
-        opacity: 1;
+        transform: translateY(145px);
     }
     to {
-        top: 100px;
-        opacity: 1;
+        transform: translateY(100px);
     }
 }
 
@@ -217,7 +214,7 @@ header{
 .steps-line{
     padding: 27px;
     height: 150px;
-    background-color: #0a8b05;
+    //background-color: #0a8b05;
     background: linear-gradient(to right, #000 0%, #0a8b05 50%, #000 100%);
     background-position: center;
     background-repeat: no-repeat;
@@ -253,7 +250,6 @@ header{
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
         color: #ffc539;
         opacity: 1;
-        font-family: GothamPro;
         font-size: 45px;
         font-weight: 900;
         text-transform: uppercase;
@@ -273,7 +269,6 @@ header{
         border-radius: 15px;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
         color: white;
-        font-family: GothamPro;
         font-size: 17px;
         font-weight: 900;
         text-transform: uppercase;
@@ -343,7 +338,6 @@ header{
         justify-content: space-evenly;
         align-items: center;
         color: white;
-        font-family: GothamPro;
         font-size: 13px;
         font-weight: 500;
         font-style: italic;
@@ -392,7 +386,6 @@ footer{
 .copyright{
     text-align: center;
     color: #444;
-    font-family: GothamPro;
     font-size: 11px;
     font-weight: 500;
     font-style: italic;

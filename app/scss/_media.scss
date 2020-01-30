@@ -3,44 +3,48 @@
 
 /*==========  Desktop First  ==========*/
 
-
-
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width : 1200px) {
+  .players1{
+    position: absolute;
+    top: 370px !important;
+    left: -8px !important;
+    height: 90px;
+  }
+  .players2{
+    position: absolute;
+    top: 370px !important;
+    right: 5px !important;
+    left: unset !important;
+    height: 90px;
+  }
+}
 
 @media only screen and (max-width : 1150px) {
-
   .players1,.players2{
     display: none !important;
   }
-
   .step-wrapp{
     flex-direction: column;
     align-items: center;
   }
-
   .steps-line{
     height: 100%;
   }
-
   .step{
     margin: 10px 0px;
   }
-
   .privilege-wrapp{
     flex-direction: column;
     align-items: center;
   }
-
   .privilege__item{
     margin: 10px 2px;
     width: 40%;
   }
-
   .arrows{
     display: none;
   }
-
 }
 /**/
 
@@ -50,183 +54,147 @@
   .privilege__item{
     width: 50%;
   }
-
-  .wrapp-link{
+  .action{
     position: absolute;
     bottom: 9px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
+    &__descr{
+      margin: 10px auto;
+    }
+    &__link {
+      margin: 0 auto;
+    }
   }
-
-  .x{
-    margin: 10px auto;
+  .promo{
+    &__bonus{
+      font-size: 80px;
+      text-align: center;
+    }
+    &__procent{
+      font-size: 105px;
+      text-align: center;
+    }
+    &__deposit{
+      font-size: 24px;
+      text-align: center;
+    }
   }
-
-  .promo_link {
-    margin: 0 auto;
-  }
-
-  .bonus{
-    font-size: 80px;
-    text-align: center;
-  }
-  .procent{
-    font-size: 105px;
-    text-align: center;
-  }
-
-  .deposit {
-    font-size: 24px;
-    text-align: center;
-  }
-
   .truck {
     top: 40%;
     transform: translateX(-46%)!important;
     &__img{
       height: 280px;
     }
+    &__front-money {
+      right: 50px;
+      height: 105px;
+    }
+    &__back-money {
+      right: 0px;
+      width: 360px;
+    }
   }
-
   .overlay{
     display: none;
   }
-
-  .truck__front-money {
-    right: 50px;
-    height: 105px;
-  }
-
-  .truck__back-money {
-    right: 0px;
-    width: 360px;
-  }
-
-  .wrapp-man{
+  .man{
     top: 48%;
     left: 50%;
     transform: translateX(-83%)!important;
+    &__img{
+      height: 220px;
+      z-index: 1;
+    }
   }
-
-  .man{
-    height: 220px;
-    z-index: 1;
-  }
-
 }
 /**/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
   .top-line{
     border-bottom: none;
   }
-
   .description{
     display: none;
   }
-
   .logo{
     margin: 0 auto;
   }
-
   .truck__img {
     height: 280px;
   }
-
 }
 /**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
-  .deposit {
-    font-size: 19px;
+  .promo{
+    &__bonus{
+      font-size: 60px;
+      text-align: center;
+    }
+    &__procent{
+      font-size: 80px;
+      line-height: .7;
+    }
+    &__deposit{
+      font-size: 19px;
+    }
   }
-
-  .procent {
-    font-size: 80px;
-    margin-top: -5%;
-  }
-
   .top-line {
     padding: 20px 0 0px;
   }
-
-  .bonus {
-    font-size: 60px;
-  }
-
   .privilege__item{
     width: 100%;
   }
-
   .privilege__title{
     width: 140px;
   }
-
-  .promo_link {
-    max-width: 300px;
+  .action{
+    &__descr{
+      font-size: 19px;
+      span {
+        color: #00d15d;
+        font-size: 22px;
+        display: block;
+      }
+    }
+    &__link {
+      max-width: 300px;
+    }
   }
-
-  .x {
-    font-size: 19px;
+  .man {
+    top: 41%;
+    &__img{
+      max-height: 200px;
+    }
   }
-
-  .x span {
-    color: #00d15d;
-    font-size: 22px;
-    display: block;
-  }
-
-  .man{
-    max-height: 200px;
-  }
-
   .truck {
     top: 37%;
     z-index: 0;
     transform: translateX(-48%)!important;
-  }
-
-  .truck__img {
-    max-height: 220px;
-    position: absolute;
-  }
-
-  .truck__back-money{
-    left: unset !important;
-    right: 0px;
-    width: 240px;
-  }
-
-  .truck__front-money{
-    left: unset !important;
-    right: 20px;
-    height: 85px;
-  }
-
-  @keyframes go-top-bottom {
-    from {
-      top: -50px;
-      opacity: 1;
+    &__img {
+      max-height: 220px;
+      position: absolute;
     }
-    to {
-      top: 10px;
-      opacity: 1;
+    &__back-money{
+      left: unset !important;
+      right: 0px;
+      width: 240px;
     }
-  }
-
-  .wrapp-man {
-    top: 41%;
+    &__front-money{
+      left: unset !important;
+      right: 20px;
+      height: 85px;
+    }
   }
   header{
     height: 570px;
   }
-
 }
 /**/
 
@@ -252,7 +220,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-  .wrapp-man {
+  .man {
     position: absolute;
     top: 37%;
     left: 50%;
@@ -266,7 +234,7 @@
     opacity: .7;
     background: linear-gradient(to right,transparent 2%,#000 30%,transparent 126%);
     position: absolute;
-    bottom: 230px;
+    bottom: 205px;
     left: 7%;
     transform: translateX(0%);
     z-index: 0;
@@ -275,22 +243,66 @@
 /**/
 
 @media only screen and (min-width : 1050px) {
-  .truck__img {
-    height: 360px;
-  }
+
   .truck {
     left: 56%;
     transform: translateX(-13%)!important;
+    &__img {
+      height: 360px;
+    }
   }
-  .wrapp-man {
+  .man {
     top: 35%;
     left: 50%;
     transform: translateX(-30%)!important;
   }
+
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {}
 
-@media only screen and (min-width : 1400px) {}
+@media only screen and (min-width : 1580px) {
+
+  .players1 {
+     top: 365px !important;
+     transform: translateY(40%) !important;
+     left: 40px !important;
+     height: 105px;
+  }
+  .players2 {
+    top: 365px !important;
+    transform: translateY(40%) !important;
+    right: 40px !important;
+    height: 105px;
+  }
+  .truck {
+    left: 54%;
+    top: 36%;
+  }
+  .man {
+    top: 44%;
+  }
+}
+
+@media only screen and (min-width : 1800px) {
+  .players1{
+      top: 380px!important;
+      transform: translateY(80%) !important;
+      left: 40px!important;
+      height: 105px;
+  }
+  .players2{
+    top: 380px!important;
+    transform: translateY(80%) !important;
+    right: 40px!important;
+    height: 105px;
+  }
+  //.players2{
+  //  top: 445px!important;
+  //  right: 50px!important;
+  //  height: 110px;
+  //}
+}
+
 /**/
