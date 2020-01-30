@@ -7,22 +7,19 @@
 @media only screen and (max-width : 1200px) {
   .players1{
     position: absolute;
-    top: 370px !important;
-    left: -8px !important;
-    height: 90px;
+    top: 370px;
+    left: -8px;
   }
   .players2{
     position: absolute;
-    top: 370px !important;
-    right: 5px !important;
-    left: unset !important;
-    height: 90px;
+    top: 370px;
+    right: 5px;
   }
 }
 
 @media only screen and (max-width : 1150px) {
   .players1,.players2{
-    display: none !important;
+    display: none;
   }
   .step-wrapp{
     flex-direction: column;
@@ -84,13 +81,14 @@
   }
   .truck {
     top: 40%;
-    transform: translateX(-46%)!important;
+    transform: translateX(-46%);
     &__img{
       height: 280px;
     }
     &__front-money {
       right: 50px;
       height: 105px;
+      left: unset !important;
     }
     &__back-money {
       right: 0px;
@@ -103,7 +101,7 @@
   .man{
     top: 48%;
     left: 50%;
-    transform: translateX(-83%)!important;
+    transform: translateX(-83%);
     &__img{
       height: 220px;
       z-index: 1;
@@ -176,20 +174,19 @@
   .truck {
     top: 37%;
     z-index: 0;
-    transform: translateX(-48%)!important;
+    transform: translateX(-48%);
     &__img {
       max-height: 220px;
       position: absolute;
     }
     &__back-money{
-      left: unset !important;
       right: 0px;
       width: 240px;
     }
     &__front-money{
-      left: unset !important;
       right: 20px;
       height: 85px;
+      left: unset !important;
     }
   }
   header{
@@ -224,8 +221,7 @@
     position: absolute;
     top: 37%;
     left: 50%;
-    -webkit-transform: translateX(-50%)!important;
-    transform: translateX(-29%)!important;
+    transform: translateX(-29%);
     z-index: 1;
   }
   .overlay {
@@ -246,7 +242,7 @@
 
   .truck {
     left: 56%;
-    transform: translateX(-13%)!important;
+    transform: translateX(-13%);
     &__img {
       height: 360px;
     }
@@ -254,7 +250,7 @@
   .man {
     top: 35%;
     left: 50%;
-    transform: translateX(-30%)!important;
+    transform: translateX(-30%);
   }
 
 }
@@ -265,15 +261,16 @@
 @media only screen and (min-width : 1580px) {
 
   .players1 {
-     top: 365px !important;
-     transform: translateY(40%) !important;
-     left: 40px !important;
-     height: 105px;
+     top: 365px;
+     transform: translateY(40%);
+     left: 40px;
   }
   .players2 {
-    top: 365px !important;
-    transform: translateY(40%) !important;
-    right: 40px !important;
+    top: 365px;
+    transform: translateY(40%);
+    right: 40px;
+  }
+  .players__img{
     height: 105px;
   }
   .truck {
@@ -287,22 +284,15 @@
 
 @media only screen and (min-width : 1800px) {
   .players1{
-      top: 380px!important;
-      transform: translateY(80%) !important;
-      left: 40px!important;
-      height: 105px;
+      top: 380px;
+      transform: translateY(80%);
+      left: 40px;
   }
   .players2{
-    top: 380px!important;
-    transform: translateY(80%) !important;
-    right: 40px!important;
-    height: 105px;
+    top: 380px;
+    transform: translateY(80%);
+    right: 40px;
   }
-  //.players2{
-  //  top: 445px!important;
-  //  right: 50px!important;
-  //  height: 110px;
-  //}
-}
 
+}
 /**/

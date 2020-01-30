@@ -34,12 +34,16 @@
 	</head>
 	<body>
 		<header>
-			<div class="wrapp-players" id="scene" data-scalar-y="0">
-				<img src="images/players1.png"  data-depth="0.2" class="players1" alt="test">
-				<img src="images/players2.png"  data-depth="0.2" class="players2" alt="test">
+            <div class="players1" >
+                <div class="wrapp-players" id="scene" data-scalar-y="0">
+                    <img src="images/players1.png"  data-depth="0.4" class="players__img" alt="test">
+                </div>
+            </div>
+			<div class="players2" >
+				<div class="wrapp-players" id="scenee" data-scalar-y="0">
+					<img src="images/players2.png"  data-depth="0.4" class="players__img" alt="test">
+				</div>
 			</div>
-
-
 			<div class="container">
 				<div class="top-line">
 					<div class="logo">
@@ -57,13 +61,17 @@
 					<a class="action__link" href="#">ПОЛУЧИТЬ бонус</a>
 				</div>
 				<div class="overlay"></div>
-				<div class="man" id="man" data-scalar-y="0">
-					<img data-depth="0.7" src="images/man.png" class="man__img" alt="test">
+				<div class="man">
+					<div id="man" data-scalar-y="0" >
+						<img data-depth="0.7" src="images/man.png" class="man__img" alt="test">
+					</div>
 				</div>
-				<div  id="promo" data-scalar-y="0" class="truck">
-					<img src="images/truck2.png" data-depth="0.1" class="truck__img" alt="test">
-					<img src="images/back-money.png" class="truck__back-money" alt="test">
-					<img src="images/front-money.png" class="truck__front-money" alt="test">
+				<div class="truck">
+					<div  id="promo" data-scalar-y="0">
+						<img src="images/truck2.png" data-depth="0.1" class="truck__img" alt="test">
+						<img src="images/back-money.png" class="truck__back-money" alt="test">
+						<img src="images/front-money.png" class="truck__front-money" alt="test">
+					</div>
 				</div>
 			</div>
 		</header>
